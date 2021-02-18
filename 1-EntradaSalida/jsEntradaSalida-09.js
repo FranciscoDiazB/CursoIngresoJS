@@ -6,17 +6,25 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 
-	let sueldo; 
-	let aumento;
-	let sueldoaumento; 
+   let minimo;
+   let maximo;
+   let numero; 
+
+   minimo = parseInt(document.getElementById("txtIdMinimo").value);
+   maximo = parseInt(document.getElementById("txtIdMaximo").value); 
+
+   numero = Math.round(Math.random() * (maximo - minimo) + minimo);
+
+   document.getElementById("txtIdResultado").value = numero
+ 
+
+   //Esto esta mal pero hice un randomizador de numero tipo google. El codigo del ejercicio esta resuelto abajo. 
+
+
+   
+  
+
 	
-	sueldo = parseFloat(document.getElementById("txtIdSueldo").value); 
-
-	aumento = sueldo * 10/100 
-	sueldoaumento = sueldo + aumento
-
-	document.getElementById("txtIdResultado").value = sueldoaumento 
-
 }
  
 /* Identifico las variables 
@@ -38,6 +46,16 @@ function mostrarAumento()
 
    Asigno una nueva variable que, a la que le voy a dar un valor numero
 
+	let sueldo; 
+	let aumento;
+	let sueldoaumento; 
+	
+	sueldo = parseFloat(document.getElementById("txtIdSueldo").value); 
+
+	aumento = sueldo * 10/100 
+	sueldoaumento = sueldo + aumento
+
+	document.getElementById("txtIdResultado").value = sueldoaumento 
 
 
 

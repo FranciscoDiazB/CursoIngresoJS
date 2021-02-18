@@ -9,13 +9,13 @@ function Sumar ()
     let precio2;
     let precio3; 
 
-    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value)
-    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value)
-    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value)
+    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value);
+    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value);
+    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value);
 
-    let suma = precio1 + precio2 + precio3
+    let suma = precio1 + precio2 + precio3;
 
-    alert(suma)
+    alert(suma);
 }
 function Promedio () 
 {
@@ -23,14 +23,14 @@ function Promedio ()
     let precio2;
     let precio3; 
 
-    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value)
-    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value)
-    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value)
+    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value);
+    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value);
+    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value);
 
-    let suma = precio1 + precio2 + precio3
-    let promedio = suma / 3
+    let suma = precio1 + precio2 + precio3;
+    let promedio = suma / 3;
 
-    alert(promedio)
+    alert(promedio);
 	
 }
 function PrecioFinal () 
@@ -39,13 +39,13 @@ function PrecioFinal ()
     let precio2;
     let precio3; 
 
-    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value)
-    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value)
-    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value)
+    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value);
+    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value);
+    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value);
 
-    let suma = precio1 + precio2 + precio3
+    let suma = precio1 + precio2 + precio3;
 
-    let preciofinal = suma + (suma * 0.21)
+    let preciofinal = suma + (suma * 0.21);
 
-    alert (preciofinal)
+    alert (preciofinal);
 }

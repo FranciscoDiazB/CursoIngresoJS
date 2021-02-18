@@ -5,15 +5,15 @@ function mostrar()
 
 	if(edad >= 13 & edad <=17){
 
-		alert("Y, compra escabio en el chino");
+		alert("Adolescente");
 	}
 	else if(edad < 13){
 
-		alert("Y, tas re quemado bro")
+		alert("Nene");
 	}
 	else{
 
-		alert("Ya podes comprar escabio en el super")
+		alert("Adulto");
 	}
 
 

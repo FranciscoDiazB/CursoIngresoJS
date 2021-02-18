@@ -1,17 +1,17 @@
 function mostrar()
 {
-	let edad 
+	let edad;
 
-	edad = parseInt(document.getElementById("txtIdEdad").value)
+	edad = parseInt(document.getElementById("txtIdEdad").value);
 	
 	if(edad != 15){
 
-		alert("Intente Denuevo")
+		alert("Intente Denuevo");
 	}
 
 	if(edad == 15){
 
-		alert("Niña Bonita")
+		alert("Niña Bonita");
 	}
 
 
