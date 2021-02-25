@@ -4,7 +4,29 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar()
 {
-	let numero; 
+	
+	let numero;
+	let seguir; 
+	let promedio; 
+	let i = 0;
+	let total = 0; 
+
+	do {
+
+		numero = parseInt(prompt("Ingrese un Numero")); 
+
+		total = total + numero;
+		i++
+
+		seguir = prompt(`Quiere ingresar otro numero? Conteste "SI"`);
+	} while (seguir == "SI"); 
+	
+	promedio = total / i
+
+	document.getElementById("txtIdSuma").value = total
+	document.getElementById("txtIdPromedio").value = promedio
+	
+	/*let numero; 
 	let i = 0;
 	let total = 0; 
 	let pregunta;
@@ -30,7 +52,7 @@ function mostrar()
 	promedio = total / i
 
 	document.getElementById("txtIdSuma").value = total
-	document.getElementById("txtIdPromedio").value = promedio
+	document.getElementById("txtIdPromedio").value = promedio*/
 
 	/* let numero; 
 	let i = 0;

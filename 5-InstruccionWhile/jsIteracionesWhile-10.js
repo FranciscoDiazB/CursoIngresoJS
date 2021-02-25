@@ -12,18 +12,83 @@ hasta que el usuario quiera, mostrar:
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar()
 {
-	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let numero;
+	let sumaneg = 0;
+	let sumapos = 0;
+	let cantidadpos = 0;
+	let ceros; 
+	let cantidadcer = 0; 
+	let cantidadneg = 0; 
+	let promediopos = 0;
+	let pormedioneg= 0; 
+	let diferencia; 
+	let seguir; 
+	let pos = 0; 
+	let neg = 0;
+	let cer = 0;
+	let par; 
+	let cantidadpar = 0; 
+	let pars = 0; 
 
-	respuesta="si";
+	
 
-	while(respuesta=="si")
-	{
+
+	do {
+
+		numero = parseFloat(prompt("Ingrese un numero..."));
+
+		while(isNaN(numero)){
+			numero = parseFloat(prompt("Ingrese un nuevo numero..."));
+		}
+
+		if(numero > 0){
+			sumapos = sumapos + numero;
+            
+			pos++
+			cantidadpos = pos;
+		}
+		else if(numero < 0){
+			sumaneg = sumaneg + numero;
+            
+			neg++
+			cantidadneg = neg;
+		}
+		else{
+			ceros = numero;
+            
+			cer++
+			cantidadcer = cer; 		
+		}
+
+		if(numero % 2 == 0){
+			pars++
+			cantidadpar = pars; 
+		}
 		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+		seguir = prompt("Desearia continuar? Oprima 's'");
 
-	document.write("la suma de negativos es :"+sumaNegativos);
-}//FIN DE LA FUNCIÓN
+	} while (seguir == 's');
+	 
+    if(cantidadpos > 0){
+		promediopos = sumapos / cantidadpos;
+	}
+    
+	if(cantidadneg > 0){
+		pormedioneg = sumaneg / cantidadneg;
+	}
+	
+
+	diferencia = cantidadpos - cantidadneg;
+	
+
+	alert(`
+    1) ${sumaneg}
+    2) ${sumapos}
+    3) ${cantidadpos}
+	4) ${cantidadneg}
+	5) ${cantidadcer}
+	6) ${cantidadpar}
+	7) ${promediopos}
+	8) ${pormedioneg}
+	9) ${diferencia}`); 
+}

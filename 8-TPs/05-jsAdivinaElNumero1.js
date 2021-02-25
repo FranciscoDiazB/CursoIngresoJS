@@ -25,7 +25,7 @@ function verificar()
 {
   
     let numerox; 
-    let cantidad = 0; 
+    let cantidad = 0;
 
     numerox = parseInt(document.getElementById("txtIdNumero").value);
 

@@ -14,7 +14,7 @@ function mostrar()
 	    
 	}
 
-	document.getElementById("txtIdNumero").value = numero
+	document.getElementById("txtIdNumero").value = numero;
 
 	
 }
