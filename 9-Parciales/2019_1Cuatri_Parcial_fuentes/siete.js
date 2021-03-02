@@ -30,9 +30,7 @@ function mostrar()
 
         if(sexo == 'f' && altura > 190){
             contMuj190++;
-
         }
-
     }
 
     if(minAltSexo == 'f'){
