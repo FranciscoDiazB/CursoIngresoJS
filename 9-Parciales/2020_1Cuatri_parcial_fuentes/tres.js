@@ -42,38 +42,45 @@ function mostrar()
 		if(flag == 0 || temperatura > maxTemp){
 			maxTemp = temperatura;
 			maxTempNom = nombre;
+			flag = 1;
 		}
 
 		if(edad > 17 && estado == "viudo"){
 			contMayV++;
 		}
 
-		if(sexo == "m" && estado != "casado"){
-			contHSV++;
-		}
-
 		if(edad > 60 && temperatura > 38){
 			cont38++;
 		}
 
-		if(sexo == 'm' && estado == "soltero"){
-			acuEdadS += edad; 
-			contEdadS++
-		}
+		if(sexo == "m"){
+			switch(estado){
+				case "soltero":
+					acuEdadS += edad;
+					contEdadS++;
+					contHSV++;
+					break;
+				case"viudo":
+				    contHSV++;
+					break; 
 
+			}
+		}
 		seguir = prompt("Desea continuar. Ingrese 's'.");
-		flag++
 
 	} while (seguir == 's');
 
 	promedio = acuEdadS / contEdadS; 
+	if(isNaN(promedio)){
+		promedio = 0;
+	}
 
 	alert(`
-	A) El nombre de la persona con mayor temperatura es ${maxTempNom}
-	B) Hay ${contMayV} personas mayores y viudas
-	C) Hay ${contHSV} hombres viudos o solteros
-	D) Hay ${cont38} personas mayores de 60 años con mas de 38 grados de temperatura
-	E) El promedio de edad entre los hombres solteros es de ${promedio} años`); 
+	A) El nombre de la persona con mayor temperatura es ${maxTempNom} con ${maxTemp} grados de temperatura.
+	B) Hay ${contMayV} personas mayores y viudas.
+	C) Hay ${contHSV} hombres viudos o solteros.
+	D) Hay ${cont38} personas mayores de 60 años con mas de 38 grados de temperatura.
+	E) El promedio de edad entre los hombres solteros es: ${promedio} (Si el resultado es 0, no se ingresaron hombres solteros)`); 
  
 
 
